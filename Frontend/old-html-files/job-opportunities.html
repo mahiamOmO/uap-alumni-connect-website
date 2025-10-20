@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Opportunities - UAP CSE Alumni Connect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-lg">UAP</span>
+            </div>
+            <span class="ml-3 text-xl font-bold text-gray-800">CSE Alumni Connect</span>
+          </div>
+        </div>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-600 hover:text-purple-600 transition-colors">Home</a>
+          <a href="alumni-directory.html" class="text-gray-600 hover:text-purple-600 transition-colors">Alumni Directory</a>
+          <a href="job-opportunities.html" class="text-purple-600 font-medium">Jobs</a>
+          <a href="events.html" class="text-gray-600 hover:text-purple-600 transition-colors">Events</a>
+          <a href="community.html" class="text-gray-600 hover:text-purple-600 transition-colors">Community</a>
+          <a href="mentorship.html" class="text-gray-600 hover:text-purple-600 transition-colors">Mentorship</a>
+          <a href="resources.html" class="text-gray-600 hover:text-purple-600 transition-colors">Resources</a>
+          <a href="login.html" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex justify-between items-center">
+        <div>
+          <h1 class="text-3xl font-bold text-gray-800 mb-2">Job Opportunities</h1>
+          <p class="text-gray-600">Find and post job opportunities within the UAP CSE community</p>
+        </div>
+        <button onclick="openPostJobModal()" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+          <i class="fas fa-plus mr-2"></i>Post a Job
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search and Filters -->
+  <div class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="md:col-span-2">
+          <div class="relative">
+            <input type="text" placeholder="Search jobs by title, company, or location..." 
+                   class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+          </div>
+        </div>
+        
+        <div>
+          <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <option value="">All Categories</option>
+            <option value="software">Software Engineering</option>
+            <option value="data">Data Science</option>
+            <option value="product">Product Management</option>
+            <option value="research">Research</option>
+          </select>
+        </div>
+        
+        <div>
+          <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <option value="">All Locations</option>
+            <option value="remote">Remote</option>
+            <option value="dhaka">Dhaka</option>
+            <option value="chittagong">Chittagong</option>
+            <option value="sylhet">Sylhet</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Job Listings -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="space-y-6">
+      
+      <!-- Job Card 1 -->
+      <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">Senior Software Engineer</h3>
+              <div class="flex items-center space-x-4 text-sm text-gray-600">
+                <span class="flex items-center">
+                  <i class="fas fa-building mr-1"></i>
+                  Google
+                </span>
+                <span class="flex items-center">
+                  <i class="fas fa-map-marker-alt mr-1"></i>
+                  San Francisco, CA
+                </span>
+                <span class="flex items-center">
+                  <i class="fas fa-clock mr-1"></i>
+                  Full-time
+                </span>
+              </div>
+            </div>
+            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Active</span>
+          </div>
+          
+          <p class="text-gray-600 mb-4">
+            We're looking for a Senior Software Engineer to join our team and help build scalable systems that serve millions of users worldwide.
+          </p>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Python</span>
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">React</span>
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">AWS</span>
+          </div>
+          
+          <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-500">
+              Posted by: <span class="text-purple-600">Ahmed Sarker (Batch 2022)</span>
+            </div>
+            <button onclick="applyForJob('job-1')" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+              Apply Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 2 -->
+      <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">Data Scientist</h3>
+              <div class="flex items-center space-x-4 text-sm text-gray-600">
+                <span class="flex items-center">
+                  <i class="fas fa-building mr-1"></i>
+                  Microsoft
+                </span>
+                <span class="flex items-center">
+                  <i class="fas fa-map-marker-alt mr-1"></i>
+                  Seattle, WA
+                </span>
+                <span class="flex items-center">
+                  <i class="fas fa-clock mr-1"></i>
+                  Full-time
+                </span>
+              </div>
+            </div>
+            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Active</span>
+          </div>
+          
+          <p class="text-gray-600 mb-4">
+            Join our data science team to develop machine learning models and analytics solutions that drive business decisions.
+          </p>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Python</span>
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">TensorFlow</span>
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">SQL</span>
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Statistics</span>
+          </div>
+          
+          <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-500">
+              Posted by: <span class="text-purple-600">Fatima Sultana (Batch 2021)</span>
+            </div>
+            <button onclick="applyForJob('job-2')" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+              Apply Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Card 3 -->
+      <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">Product Manager</h3>
+              <div class="flex items-center space-x-4 text-sm text-gray-600">
+                <span class="flex items-center">
+                  <i class="fas fa-building mr-1"></i>
+                  Amazon
+                </span>
+                <span class="flex items-center">
+                  <i class="fas fa-map-marker-alt mr-1"></i>
+                  New York, NY
+                </span>
+                <span class="flex items-center">
+                  <i class="fas fa-clock mr-1"></i>
+                  Full-time
+                </span>
+              </div>
+            </div>
+            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Active</span>
+          </div>
+          
+          <p class="text-gray-600 mb-4">
+            Lead product strategy and development for our e-commerce platform, working with cross-functional teams to deliver customer value.
+          </p>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Product Strategy</span>
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Agile</span>
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Analytics</span>
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Leadership</span>
+          </div>
+          
+          <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-500">
+              Posted by: <span class="text-purple-600">Mohammad Rahman (Batch 2020)</span>
+            </div>
+            <button onclick="applyForJob('job-3')" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+              Apply Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="mt-8 flex justify-center">
+      <nav class="flex items-center space-x-2">
+        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">Previous</button>
+        <button class="px-3 py-2 bg-purple-600 text-white rounded-lg">1</button>
+        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">2</button>
+        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">3</button>
+        <button class="px-3 py-2 text-gray-500 hover:text-gray-700">Next</button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Post Job Modal -->
+  <div id="post-job-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-800">Post a Job Opportunity</h2>
+            <button onclick="closePostJobModal()" class="text-gray-500 hover:text-gray-700">
+              <i class="fas fa-times text-xl"></i>
+            </button>
+          </div>
+          
+          <form id="post-job-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Job Title *</label>
+                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Company *</label>
+                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Location *</label>
+                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Job Type *</label>
+                <select required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                  <option value="">Select Type</option>
+                  <option value="full-time">Full-time</option>
+                  <option value="part-time">Part-time</option>
+                  <option value="contract">Contract</option>
+                  <option value="internship">Internship</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Experience Level</label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                  <option value="">Select Level</option>
+                  <option value="entry">Entry Level</option>
+                  <option value="mid">Mid Level</option>
+                  <option value="senior">Senior Level</option>
+                  <option value="lead">Lead</option>
+                </select>
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Job Description *</label>
+              <textarea required rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Required Skills</label>
+              <input type="text" placeholder="e.g., Python, React, AWS (comma separated)" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Contact Email *</label>
+              <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+            </div>
+            
+            <div class="flex justify-end space-x-4">
+              <button type="button" onclick="closePostJobModal()" class="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                Cancel
+              </button>
+              <button type="submit" class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+                Post Job
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Modal -->
+  <div id="application-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-lg w-full">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-800">Apply for Job</h2>
+            <button onclick="closeApplicationModal()" class="text-gray-500 hover:text-gray-700">
+              <i class="fas fa-times text-xl"></i>
+            </button>
+          </div>
+          
+          <form id="application-form" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Cover Letter *</label>
+              <textarea required rows="4" placeholder="Explain why you're interested in this position..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Resume/CV *</label>
+              <input type="file" required accept=".pdf,.doc,.docx" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+            </div>
+            
+            <div class="flex justify-end space-x-4">
+              <button type="button" onclick="closeApplicationModal()" class="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                Cancel
+              </button>
+              <button type="submit" class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+                Submit Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openPostJobModal() {
+      document.getElementById('post-job-modal').classList.remove('hidden');
+    }
+    
+    function closePostJobModal() {
+      document.getElementById('post-job-modal').classList.add('hidden');
+    }
+    
+    function applyForJob(jobId) {
+      document.getElementById('application-modal').classList.remove('hidden');
+    }
+    
+    function closeApplicationModal() {
+      document.getElementById('application-modal').classList.add('hidden');
+    }
+    
+    // Handle form submissions
+    document.getElementById('post-job-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Add job posting logic here
+      console.log('Job posted');
+      closePostJobModal();
+      alert('Job posted successfully!');
+    });
+    
+    document.getElementById('application-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Add application submission logic here
+      console.log('Application submitted');
+      closeApplicationModal();
+      alert('Application submitted successfully!');
+    });
+    
+    // Close modals when clicking outside
+    document.getElementById('post-job-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closePostJobModal();
+      }
+    });
+    
+    document.getElementById('application-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeApplicationModal();
+      }
+    });
+  </script>
+</body>
+</html> 
