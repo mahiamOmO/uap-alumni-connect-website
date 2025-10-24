@@ -1,0 +1,25 @@
+node_modules/
+
+# Dependency directories
+node_modules/
+
+# Logs and Firebase temporary files
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+firebase-debug.log*
+firebase-debug.*.log*
+
+# Firebase cache
+.firebase/
+
+# Output of 'npm pack'
+*.tgz
+
+# Output folder for Vite build
+public/ 
+
+.env
+.env.local

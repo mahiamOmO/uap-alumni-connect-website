@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources - UAP CSE Alumni Connect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-lg">UAP</span>
+            </div>
+            <span class="ml-3 text-xl font-bold text-gray-800">CSE Alumni Connect</span>
+          </div>
+        </div>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-600 hover:text-purple-600 transition-colors">Home</a>
+          <a href="alumni-directory.html" class="text-gray-600 hover:text-purple-600 transition-colors">Alumni Directory</a>
+          <a href="job-opportunities.html" class="text-gray-600 hover:text-purple-600 transition-colors">Jobs</a>
+          <a href="events.html" class="text-gray-600 hover:text-purple-600 transition-colors">Events</a>
+          <a href="community.html" class="text-gray-600 hover:text-purple-600 transition-colors">Community</a>
+          <a href="mentorship.html" class="text-gray-600 hover:text-purple-600 transition-colors">Mentorship</a>
+          <a href="resources.html" class="text-purple-600 font-medium">Resources</a>
+          <a href="login.html" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex justify-between items-center">
+        <div>
+          <h1 class="text-3xl font-bold text-gray-800 mb-2">Resource Library</h1>
+          <p class="text-gray-600">Access and share academic materials, study resources, and industry insights</p>
+        </div>
+        <button onclick="openUploadResourceModal()" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+          <i class="fas fa-upload mr-2"></i>Share Resource
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resource Categories -->
+  <div class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex flex-wrap gap-4">
+        <button class="px-4 py-2 bg-purple-600 text-white rounded-lg">All Resources</button>
+        <button class="px-4 py-2 text-gray-600 hover:text-purple-600 transition-colors">Study Materials</button>
+        <button class="px-4 py-2 text-gray-600 hover:text-purple-600 transition-colors">Research Papers</button>
+        <button class="px-4 py-2 text-gray-600 hover:text-purple-600 transition-colors">Tutorials</button>
+        <button class="px-4 py-2 text-gray-600 hover:text-purple-600 transition-colors">Books</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search and Filters -->
+  <div class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="md:col-span-2">
+          <div class="relative">
+            <input type="text" placeholder="Search resources by title, author, or keywords..." 
+                   class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+          </div>
+        </div>
+        
+        <div>
+          <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <option value="">Sort by</option>
+            <option value="recent">Most Recent</option>
+            <option value="popular">Most Popular</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resources Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Resource Card 1 -->
+      <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+              <i class="fas fa-file-pdf text-white text-xl"></i>
+            </div>
+            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Study Material</span>
+          </div>
+          
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Advanced Algorithms Notes</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Comprehensive notes covering dynamic programming, graph algorithms, and advanced data structures.
+          </p>
+          
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-user mr-1"></i>
+              <span>Dr. Ahmed Khan</span>
+            </div>
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-download mr-1"></i>
+              <span>156</span>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500 ml-2">(24 reviews)</span>
+            </div>
+            <button onclick="downloadResource('resource-1')" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resource Card 2 -->
+      <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center">
+              <i class="fas fa-microscope text-white text-xl"></i>
+            </div>
+            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Research Paper</span>
+          </div>
+          
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Machine Learning in Healthcare</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Research paper on implementing ML algorithms for disease prediction and patient care optimization.
+          </p>
+          
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-user mr-1"></i>
+              <span>Fatima Sultana et al.</span>
+            </div>
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-download mr-1"></i>
+              <span>89</span>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500 ml-2">(18 reviews)</span>
+            </div>
+            <button onclick="downloadResource('resource-2')" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resource Card 3 -->
+      <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+              <i class="fas fa-chart-line text-white text-xl"></i>
+            </div>
+            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">Industry Report</span>
+          </div>
+          
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Java</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Comprehensive analysis of emerging technologies, market trends, and career opportunities in tech.
+          </p>
+          
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-user mr-1"></i>
+              <span>Mohammad Rahman</span>
+            </div>
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-download mr-1"></i>
+              <span>234</span>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500 ml-2">(31 reviews)</span>
+            </div>
+            <button onclick="downloadResource('resource-3')" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resource Card 4 -->
+      <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center">
+              <i class="fas fa-play text-white text-xl"></i>
+            </div>
+            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Tutorial</span>
+          </div>
+          
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">React.js Complete Guide</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Step-by-step tutorial covering React fundamentals, hooks, state management, and best practices.
+          </p>
+          
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-user mr-1"></i>
+              <span>Nusrat Khan</span>
+            </div>
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-download mr-1"></i>
+              <span>178</span>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500 ml-2">(27 reviews)</span>
+            </div>
+            <button onclick="downloadResource('resource-4')" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resource Card 5 -->
+      <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center">
+              <i class="fas fa-book text-white text-xl"></i>
+            </div>
+            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Book</span>
+          </div>
+          
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">System Design Interview Guide</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Comprehensive guide for system design interviews with real-world examples and case studies.
+          </p>
+          
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-user mr-1"></i>
+              <span>Ahmed Sarker</span>
+            </div>
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-download mr-1"></i>
+              <span>312</span>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500 ml-2">(45 reviews)</span>
+            </div>
+            <button onclick="downloadResource('resource-5')" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resource Card 6 -->
+      <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-lg flex items-center justify-center">
+              <i class="fas fa-code text-white text-xl"></i>
+            </div>
+            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">Code Sample</span>
+          </div>
+          
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Python Data Structures</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Collection of optimized Python implementations for common data structures and algorithms.
+          </p>
+          
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-user mr-1"></i>
+              <span>Rahim Sarker</span>
+            </div>
+            <div class="flex items-center text-sm text-gray-500">
+              <i class="fas fa-download mr-1"></i>
+              <span>145</span>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500 ml-2">(22 reviews)</span>
+            </div>
+            <button onclick="downloadResource('resource-6')" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Load More -->
+    <div class="mt-8 text-center">
+      <button class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+        Load More Resources
+      </button>
+    </div>
+  </div>
+
+  <!-- Upload Resource Modal -->
+  <div id="upload-resource-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-800">Share a Resource</h2>
+            <button onclick="closeUploadResourceModal()" class="text-gray-500 hover:text-gray-700">
+              <i class="fas fa-times text-xl"></i>
+            </button>
+          </div>
+          
+          <form id="upload-resource-form" class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Resource Title *</label>
+              <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Category *</label>
+              <select required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                <option value="">Select Category</option>
+                <option value="study-material">Study Material</option>
+                <option value="research-paper">Research Paper</option>
+                <option value="tutorial">Tutorial</option>
+                <option value="book">Book</option>
+                <option value="code-sample">Code Sample</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Description *</label>
+              <textarea required rows="4" placeholder="Describe the resource and its contents..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">File Upload *</label>
+              <input type="file" required accept=".pdf,.doc,.docx,.txt,.zip,.rar" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+              <p class="text-sm text-gray-500 mt-1">Supported formats: PDF, DOC, DOCX, TXT, ZIP, RAR (Max 50MB)</p>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Tags</label>
+              <input type="text" placeholder="Enter tags separated by commas (e.g., algorithms, python, machine-learning)" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+            </div>
+            
+            <div class="flex justify-end space-x-4">
+              <button type="button" onclick="closeUploadResourceModal()" class="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                Cancel
+              </button>
+              <button type="submit" class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+                Upload Resource
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openUploadResourceModal() {
+      document.getElementById('upload-resource-modal').classList.remove('hidden');
+    }
+    
+    function closeUploadResourceModal() {
+      document.getElementById('upload-resource-modal').classList.add('hidden');
+    }
+    
+    function downloadResource(resourceId) {
+      // Simulate download
+      console.log('Downloading resource:', resourceId);
+      alert('Download started! The file will be saved to your downloads folder.');
+    }
+    
+    // Handle form submission
+    document.getElementById('upload-resource-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      console.log('Resource uploaded');
+      closeUploadResourceModal();
+      alert('Resource uploaded successfully! It will be reviewed and published soon.');
+    });
+    
+    // Close modal when clicking outside
+    document.getElementById('upload-resource-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeUploadResourceModal();
+      }
+    });
+  </script>
+</body>
+</html>

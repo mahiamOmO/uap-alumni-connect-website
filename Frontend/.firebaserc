@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "uap-alumni-connect"
+  },
+  "targets": {
+    "uap-alumni-connect": {
+      "hosting": {
+        "uap_frontend": [
+          "uap-alumni-connect"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
